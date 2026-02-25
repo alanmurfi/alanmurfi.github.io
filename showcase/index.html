@@ -420,7 +420,7 @@ nav .container {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -451,6 +451,7 @@ nav .container {
 .skill-card:nth-child(1)::before { background: linear-gradient(90deg, var(--accent), var(--accent-deep)); }
 .skill-card:nth-child(2)::before { background: linear-gradient(90deg, var(--teal), #0a7c72); }
 .skill-card:nth-child(3)::before { background: linear-gradient(90deg, var(--coral), #c94430); }
+.skill-card:nth-child(4)::before { background: linear-gradient(90deg, var(--amber), #b06800); }
 
 .skill-card:hover {
   box-shadow: var(--shadow-xl);
@@ -474,6 +475,7 @@ nav .container {
 .skill-card:nth-child(1) .skill-icon { background: var(--accent-wash-strong); }
 .skill-card:nth-child(2) .skill-icon { background: rgba(13,148,136,0.1); }
 .skill-card:nth-child(3) .skill-icon { background: rgba(232,87,62,0.08); }
+.skill-card:nth-child(4) .skill-icon { background: rgba(217,119,6,0.1); }
 
 .skill-card h3 {
   font-size: 1.1rem;
@@ -570,6 +572,14 @@ nav .container {
   background: linear-gradient(135deg, #134e4a 0%, #0a2520 100%);
 }
 
+.project-card:nth-child(3) .project-visual {
+  background: linear-gradient(135deg, #451a1a 0%, #1a0a0a 100%);
+}
+
+.project-card:nth-child(4) .project-visual {
+  background: linear-gradient(135deg, #4a1d6a 0%, #1a0a2e 100%);
+}
+
 .project-mockup {
   position: relative;
   z-index: 1;
@@ -641,6 +651,8 @@ nav .container {
 
 .badge-blue { background: var(--accent-wash-strong); color: var(--accent); }
 .badge-teal { background: rgba(13,148,136,0.1); color: var(--teal); }
+.badge-coral { background: rgba(232,87,62,0.08); color: var(--coral); }
+.badge-purple { background: rgba(124,58,237,0.08); color: #7c3aed; }
 
 .project-info h3 {
   font-family: var(--font-display);
@@ -888,8 +900,9 @@ footer p {
             and hands-on product development.
           </p>
           <p>
-            Right now I'm building <strong>BeitragsKlar</strong>, a billing transparency
-            platform for German sports clubs, while managing Azure and OpenAI environments
+            Right now I'm shipping <strong>BeitragsKlar</strong>, a billing transparency
+            platform for German sports clubs, and building <strong>RechnungsCheck</strong>,
+            an AI-powered E-Rechnung validator — while managing Azure and OpenAI environments
             professionally. I use AI as a force multiplier — not a shortcut — to ship
             production-grade software as a solo founder.
           </p>
@@ -922,7 +935,7 @@ footer p {
   <div class="container">
     <div class="skills-header reveal">
       <div class="section-label">Expertise</div>
-      <h2 class="section-title">Three pillars of what I do</h2>
+      <h2 class="section-title">Core capabilities</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-card reveal">
@@ -970,19 +983,40 @@ footer p {
         <div class="skill-icon">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#e8573e" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         </div>
-        <h3>SaaS &amp; Product Strategy</h3>
+        <h3>SaaS &amp; German Compliance</h3>
         <p>
-          From competitive analysis and market validation to MVP development and go-to-market
-          execution. Experienced in building products for the German Vereins market with
-          regulatory compliance baked in.
+          From market validation to production launch — building SaaS products for the
+          German market with deep regulatory compliance built in. Two live products targeting
+          E-Rechnung, ZUGFeRD, DSGVO, and GoBD requirements.
         </p>
         <div class="skill-tags">
-          <span class="skill-tag">Market Research</span>
-          <span class="skill-tag">MVP Strategy</span>
           <span class="skill-tag">E-Rechnung</span>
+          <span class="skill-tag">ZUGFeRD / EN 16931</span>
           <span class="skill-tag">DSGVO</span>
-          <span class="skill-tag">Pricing</span>
+          <span class="skill-tag">GoBD</span>
+          <span class="skill-tag">MVP Strategy</span>
+          <span class="skill-tag">Stripe Billing</span>
           <span class="skill-tag">GTM</span>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:0.3s;">
+        <div class="skill-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3>Android &amp; Mobile Development</h3>
+        <p>
+          Building native Android apps from concept to Google Play — Kotlin-first development
+          with modern architecture patterns, encrypted local storage, accessibility services,
+          and Firebase integration for monitoring and analytics.
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">Kotlin</span>
+          <span class="skill-tag">Jetpack</span>
+          <span class="skill-tag">Material Design 3</span>
+          <span class="skill-tag">Room / SQLCipher</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">MVVM</span>
+          <span class="skill-tag">Google Play</span>
         </div>
       </div>
     </div>
@@ -994,7 +1028,7 @@ footer p {
   <div class="container">
     <div class="projects-header reveal">
       <div class="section-label">Projects</div>
-      <h2 class="section-title">What I'm building</h2>
+      <h2 class="section-title">What I'm building &amp; shipping</h2>
     </div>
     <div class="projects-list">
 
@@ -1023,24 +1057,26 @@ footer p {
           </div>
         </div>
         <div class="project-info">
-          <div class="project-badge badge-blue">In Development</div>
+          <div class="project-badge badge-blue">Live Beta</div>
           <h3>BeitragsKlar</h3>
           <p>
-            A member billing transparency portal purpose-built for German sports clubs.
-            The first standalone tool that gives members clear visibility into fees and
-            payments, while helping volunteer treasurers handle E-Rechnung compliance
-            without the complexity.
+            Member billing transparency platform for German sports clubs — 68 API routes,
+            51 row-level security policies, ZUGFeRD 2.x compliant invoicing, and CAMT.053
+            bank statement import with auto-matching. Built solo with AI-assisted development
+            and ready for beta clubs.
           </p>
           <div class="project-tech">
             <span>Next.js</span>
             <span>Supabase</span>
+            <span>Stripe</span>
             <span>Vercel</span>
-            <span>ZUGFeRD</span>
+            <span>ZUGFeRD 2.x</span>
             <span>SEPA XML</span>
             <span>DSGVO</span>
+            <span>Sentry</span>
           </div>
           <a href="#" class="project-link">
-            Coming soon
+            Beta launching soon
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -1080,6 +1116,95 @@ footer p {
           </div>
           <a href="#contact" class="project-link">
             Ask me about this
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: RechnungsCheck -->
+      <div class="project-card reveal" style="transition-delay:0.2s;">
+        <div class="project-visual">
+          <div class="project-mockup">
+            <div class="mockup-window">
+              <div class="mockup-dots"><span></span><span></span><span></span></div>
+              <div style="font-family:monospace;font-size:0.65rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+                <div style="color:rgba(255,255,255,0.7);font-weight:600;margin-bottom:4px;">E-Rechnung Validator</div>
+                <div style="display:flex;gap:6px;margin-bottom:8px;">
+                  <div style="background:rgba(232,87,62,0.3);padding:3px 8px;border-radius:4px;font-size:0.55rem;color:rgba(255,255,255,0.7);">XML</div>
+                  <div style="background:rgba(37,99,235,0.3);padding:3px 8px;border-radius:4px;font-size:0.55rem;color:rgba(255,255,255,0.7);">PDF</div>
+                  <div style="background:rgba(13,148,136,0.3);padding:3px 8px;border-radius:4px;font-size:0.55rem;color:rgba(255,255,255,0.7);">ZUGFeRD</div>
+                </div>
+                <div style="background:rgba(40,202,65,0.12);border:1px solid rgba(40,202,65,0.2);border-radius:6px;padding:8px;margin-bottom:6px;">
+                  <div style="color:rgba(40,202,65,0.8);font-size:0.55rem;font-weight:600;">EN 16931 COMPLIANT</div>
+                  <div style="color:rgba(255,255,255,0.35);font-size:0.5rem;margin-top:2px;">47/47 rules passed</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:8px;">
+                  <div style="color:rgba(255,255,255,0.4);font-size:0.5rem;">AI Explanation (Claude)</div>
+                  <div class="mockup-line medium" style="margin-top:4px;margin-bottom:4px;"></div>
+                  <div class="mockup-line short"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-badge badge-coral">In Development</div>
+          <h3>RechnungsCheck</h3>
+          <p>
+            AI-powered E-Rechnung validator for German businesses receiving electronic invoices.
+            Upload any invoice, get instant EN 16931 compliance checks, plain-German AI explanations
+            of errors, and auto-generated supplier correction emails.
+          </p>
+          <div class="project-tech">
+            <span>Next.js</span>
+            <span>Claude AI</span>
+            <span>ZUGFeRD</span>
+            <span>EN 16931</span>
+            <span>Vercel</span>
+            <span>Upstash Redis</span>
+          </div>
+          <a href="#" class="project-link">
+            Coming soon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 4: MorningMindful -->
+      <div class="project-card reveal" style="transition-delay:0.3s;">
+        <div class="project-visual">
+          <div class="project-mockup">
+            <div style="width:180px;margin:0 auto;background:#f8f8fc;border-radius:24px;padding:12px 16px;box-shadow:0 4px 24px rgba(0,0,0,0.25);position:relative;">
+              <div style="width:60px;height:4px;background:rgba(255,255,255,0.2);border-radius:2px;margin:0 auto 10px;"></div>
+              <div style="text-align:center;font-family:var(--font-display);font-size:0.85rem;color:#1a1a2e;font-weight:600;margin-bottom:6px;">Morning Mindful</div>
+              <div style="display:flex;justify-content:space-around;margin-bottom:10px;">
+                <div style="text-align:center;"><div style="font-size:0.95rem;font-weight:700;color:#1a1a2e;">12</div><div style="font-size:0.5rem;color:#6b6b80;">Entries</div></div>
+                <div style="text-align:center;"><div style="font-size:0.95rem;font-weight:700;color:#1a1a2e;">2,840</div><div style="font-size:0.5rem;color:#6b6b80;">Words</div></div>
+                <div style="text-align:center;"><div style="font-size:0.95rem;font-weight:700;color:#7c3aed;">7</div><div style="font-size:0.5rem;color:#6b6b80;">Streak</div></div>
+              </div>
+              <div style="background:#7c3aed;color:white;text-align:center;padding:10px;border-radius:12px;font-size:0.7rem;font-weight:600;letter-spacing:0.5px;">WRITE NOW</div>
+              <div style="width:40px;height:3px;background:#ccc;border-radius:2px;margin:8px auto 0;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-badge" style="background:rgba(124,58,237,0.08);color:#7c3aed;">On Google Play</div>
+          <h3>Morning Mindful</h3>
+          <p>
+            A digital wellbeing Android app that blocks social media during your morning hours
+            until you complete a journal entry. Privacy-first design with encrypted local storage,
+            multi-language support, and two blocking modes — built solo with Claude Code.
+          </p>
+          <div class="project-tech">
+            <span>Kotlin</span>
+            <span>Material Design 3</span>
+            <span>Room / SQLCipher</span>
+            <span>Firebase</span>
+            <span>MVVM</span>
+            <span>Google Play</span>
+          </div>
+          <a href="https://github.com/alanmurfi/MorningMindful" class="project-link" target="_blank" rel="noopener">
+            View on GitHub
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
